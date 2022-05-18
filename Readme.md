@@ -1,16 +1,16 @@
-PUBLISH-SUBSCRIBE MESSAGING PATTERN
+# PUBLISH-SUBSCRIBE MESSAGING PATTERN
 
 The goal of this project is to design and implement a messaging system following the Publish-Subscribe pattern.
 
 
-PREREQUISITES
+### PREREQUISITES
 
 You must have the following software installed on your development machine:
 
 * [Python](https://www.python.org/downloads/) - version 3 or above
 
 
-SET UP THE APP FROM CODE:
+### SET UP THE APP FROM CODE:
 
 1. In a terminal, navigate to this sample's root directory.
 
@@ -25,7 +25,7 @@ SET UP THE APP FROM CODE:
        `python3 main.py`
 
 
-SET UP THE APP WITH DOCKER:
+### SET UP THE APP WITH DOCKER:
 
 1. In a terminal, navigate to this sample's root directory.
 
@@ -40,7 +40,7 @@ SET UP THE APP WITH DOCKER:
        `docker run -it my-tag`
 
 
-RUN SAMPLES
+### RUN SAMPLES
 
 1. Now that the program has started it awaits for your input.
 
@@ -51,7 +51,7 @@ RUN SAMPLES
 3. Enter 'q' to end program.
 
 
-RUN TESTS 
+### RUN TESTS 
 
 1. In a terminal, navigate to this sample's root directory.
 
