@@ -67,4 +67,4 @@ You must have the following software installed on your development machine:
 
 Enjoy ! 
 
-Check [Architecture](https://github.com/zkaddach/pubsub/blob/master/Docs/Architecture.md) for more details.
+Check [Architecture](https://github.com/zkaddach/pubsub/blob/master/Docs/Architecture.md) and [Improvements](https://github.com/zkaddach/pubsub/blob/master/Docs/Improvements.md) for more information.
