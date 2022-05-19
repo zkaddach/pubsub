@@ -21,9 +21,7 @@ def test_name():
 def test_publish_without_subscribers():
     subs_pipe_conns = SubscribersPipeConnections()
     topic = MotionVectorTopic(subs_pipe_conns)
-    msg = MotionVectorMessage(
-        1720246845, "Frame_1", 44, 55, 200, 200, [[2, 4], [3, 6]]
-    )
+    msg = MotionVectorMessage(1720246845, "Frame_1", 44, 55, 200, 200, [[2, 4], [3, 6]])
     assert topic.publish(msg) is False
 
 

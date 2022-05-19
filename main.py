@@ -10,10 +10,7 @@ from Topics.BaseTopic import BaseTopic
 from ImageProcessors import DetectionProcessor
 
 
-def detect_object(
-        sub_senders: SubscribersPipeConnections,
-        locker: Lock
-) -> None:
+def detect_object(sub_senders: SubscribersPipeConnections, locker: Lock) -> None:
     motion_topic = MotionVectorTopic(True, sub_senders)
     detection_topic = DetectionVectorTopic(True, sub_senders)
     single_shot = SingleShotDetectorPubSub()
@@ -29,16 +26,12 @@ def detect_object(
         single_shot.publish(detection_msg)
 
 
-def ipc_logging(
-        sub_senders: SubscribersPipeConnections,
-        locker: Lock
-) -> None:
+def ipc_logging(sub_senders: SubscribersPipeConnections, locker: Lock) -> None:
     sub_logger = LoggerSub()
     while True:
         for topic_name in sub_senders.keys():
-            if (
-                topic_name not in sub_logger.subscriptions()
-                and topic_name in list(TOPIC_BUILDER.keys())
+            if topic_name not in sub_logger.subscriptions() and topic_name in list(
+                TOPIC_BUILDER.keys()
             ):
                 topic_instance = TOPIC_BUILDER[topic_name](True, sub_senders)
                 sub_logger.subscribe(topic_instance)
@@ -48,10 +41,7 @@ def ipc_logging(
             locker.release()
 
 
-def detect_motion(
-        sub_senders: SubscribersPipeConnections,
-        locker: Lock
-) -> None:
+def detect_motion(sub_senders: SubscribersPipeConnections, locker: Lock) -> None:
     message = MotionVectorMessage(
         1720246845, "Frame_1", 44, 55, 200, 200, [[2, 4], [3, 6]]
     )
