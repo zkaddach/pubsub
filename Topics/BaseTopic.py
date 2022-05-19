@@ -82,8 +82,8 @@ class BaseTopic(ABC):
         """
         Adds the subscriber callback method, allowing topic to
         send it new message published.
-        This method is either a subscriber method (for non-multiprocessing topics)
-        or a Pipe.Connection.send method.
+        This method is either a subscriber method
+        (for non-multiprocessing topics) or a Pipe.Connection.send method.
 
         Parameters
         ----------
@@ -99,12 +99,13 @@ class BaseTopic(ABC):
         try:
             if self.is_multiprocessing and self.subs_pipe_conn:
                 self.subs_pipe_conn.add(
-                    topic_name=self.name(), subscriber_callback=subscriber_callback
+                    topic_name=self.name(),
+                    subscriber_callback=subscriber_callback,
                 )
             else:
                 self.__class__._local_subscriptions.append(subscriber_callback)
             return True
-        except KeyError as err:
+        except KeyError:
             return False
 
     @classmethod

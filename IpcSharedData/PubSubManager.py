@@ -20,4 +20,7 @@ class PubSubManager(SyncManager):
         self.SubscribersPipeConnections: Any
 
 
-PubSubManager.register("SubscribersPipeConnections", SubscribersPipeConnections)
+PubSubManager.register(
+    "SubscribersPipeConnections",
+    SubscribersPipeConnections,
+)

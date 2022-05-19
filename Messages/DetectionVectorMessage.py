@@ -45,7 +45,9 @@ class DetectionVectorMessage(BaseMessage):
     Examples
     --------
     >>> from Messages import DetectionVectorMessage
-    >>> msg = DetectionVectorMessage(1720246845, 'Frame_1', 44, 55, 200, 200, [0.2, 0.8])
+    >>> msg = DetectionVectorMessage(
+    >>>     1720246845, 'Frame_1', 44, 55, 200, 200, [0.2, 0.8]
+    >>> )
     >>> print(msg)
     """
 

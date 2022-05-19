@@ -1,14 +1,9 @@
-import time
-
-import pytest
-
 from Topics import MotionVectorTopic
-from IpcSharedData import SubscribersPipeConnections, PubSubManager
+from IpcSharedData import SubscribersPipeConnections
 from Messages import MotionVectorMessage
 from Subscribers import LoggerSub
 from Publishers import MotionDetectorPub
 from typing import Callable
-import multiprocessing as mp
 
 
 def test_get_instances():
@@ -26,7 +21,9 @@ def test_name():
 def test_publish_without_subscribers():
     subs_pipe_conns = SubscribersPipeConnections()
     topic = MotionVectorTopic(subs_pipe_conns)
-    msg = MotionVectorMessage(1720246845, "Frame_1", 44, 55, 200, 200, [[2, 4], [3, 6]])
+    msg = MotionVectorMessage(
+        1720246845, "Frame_1", 44, 55, 200, 200, [[2, 4], [3, 6]]
+    )
     assert topic.publish(msg) is False
 
 

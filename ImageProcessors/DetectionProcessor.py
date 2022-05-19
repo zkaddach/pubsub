@@ -13,8 +13,8 @@ class DetectionProcessor(BaseProcessor):
 
     def process(self, message: BaseMessage | None) -> DetectionVectorMessage:
         """Method which process the message.
-        Detect objects from images fed by a motion detector. The motion detector
-        publish messages of type MotionVectorMessage.
+        Detect objects from images fed by a motion detector. The motion
+        detector publish messages of type MotionVectorMessage.
 
         Parameters
         ----------
@@ -28,7 +28,9 @@ class DetectionProcessor(BaseProcessor):
             containing prediction.
         """
         if not isinstance(message, MotionVectorMessage):
-            raise TypeError(f"Message {message} is not of type MotionVectorMessage.")
+            raise TypeError(
+                f"Message {message} is not of type MotionVectorMessage."
+            )
         # PROCESSING MESSAGE HERE, OBJECT DETECTION...
         detection_msg = DetectionVectorMessage(
             1720246845, "Frame_1", 44, 55, 200, 200, [0.2, 0.8]

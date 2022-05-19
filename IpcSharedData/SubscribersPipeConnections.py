@@ -21,17 +21,18 @@ class SubscribersPipeConnections(BaseSharedData):
 
     def add(self, topic_name: str, subscriber_callback: Callable) -> None:
         """
-        Adds Pipe.Connection.send method of a subscriber (running on a different process).
-        To be used by topics.
+        Adds Pipe.Connection.send method of a subscriber (running on a
+        different process). To be used by topics.
 
         Parameters
         ----------
         topic_name: str
-            Name of the topic. Used as key for appending the new subscriber's callback.
+            Name of the topic. Used as key for appending the
+            new subscriber's callback.
 
         subscriber_callback: Callable
-            Pipe.Connection.send method used to send BaseMessage objects to subscriber
-            (which is running on a different process).
+            Pipe.Connection.send method used to send BaseMessage
+            objects to subscriber (which is running on a different process).
 
         Returns
         -------
@@ -42,12 +43,14 @@ class SubscribersPipeConnections(BaseSharedData):
 
     def get(self, topic_name: str) -> List[Callable] | None:
         """
-        Get all Pipe.Connection.send methods for all subscribers of the topic with topic_name.
+        Get all Pipe.Connection.send methods for all subscribers
+        of the topic with topic_name.
 
         Parameters
         ----------
         topic_name: str
-            Name of the topic for which to retrieve subscribers Pipe.Connection objects.
+            Name of the topic for which to retrieve subscribers
+            Pipe.Connection objects.
 
         Returns
         -------

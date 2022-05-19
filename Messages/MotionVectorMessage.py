@@ -45,7 +45,9 @@ class MotionVectorMessage(BaseMessage):
     Examples
     --------
     >>> from Messages import MotionVectorMessage
-    >>> msg = MotionVectorMessage(1720246845, 'Frame_1', 44, 55, 200, 200, [[2, 4], [3, 6]])
+    >>> msg = MotionVectorMessage(
+    >>>     1720246845, 'Frame_1', 44, 55, 200, 200, [[2, 4], [3, 6]]
+    >>> )
     >>> print(msg)
     """
 
