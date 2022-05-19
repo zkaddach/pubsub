@@ -8,4 +8,6 @@ Here are some possible improvements for the project:
     - Manage better errors such as topics that doesn't exist yet
 - Add tests in respect of the FIRST method (there are actually very few tests implemented just as examples)
 - Make this messaging system a library 
+- Integrate this system into a complete application 
+- Test performances (cpu and memory usage)
   
