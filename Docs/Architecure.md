@@ -55,3 +55,8 @@ For the implementation of this we define:
 
 #### Processors
 Finally, we define **Processors** objects which will process messages, and do something with them.  
+
+## Class diagram
+Here's a scheme of the architecture. 
+
+![class_diagram](https://user-images.githubusercontent.com/26309004/169176159-39fe7472-f81f-4aca-bc41-8600e47be69e.png)
