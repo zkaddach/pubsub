@@ -57,7 +57,13 @@ You must have the following software installed on your development machine:
 
 2. Run the following command:
 
-   `python3 -m pytest`
+    `mypy .` #python static type check
+
+    `black .` #python code formatter
+
+    `flake8 .` #python code linter
+
+   `python3 -m pytest` #python tests
 
 Enjoy ! 
 
