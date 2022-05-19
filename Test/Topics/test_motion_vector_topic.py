@@ -50,29 +50,6 @@ def test_publish_no_multiprocessing():
         assert str(msgs[i]) == str(gotten_msg)
 
 
-# def subscribing(shared_pipe_conns):
-#     sub_topic = MotionVectorTopic(shared_pipe_conns)
-#     subscribers = 3
-#     subs = []
-#     for _ in range(subscribers):
-#         subs.append(LoggerSub())
-#         subs[-1].subscribe(sub_topic)
-#     while True:
-#         subs[-1].get(sub_topic.name())
-
-# def test_publish_with_subscribers():
-#     with PubSubManager() as manager:
-#         subs_pipe_conns = manager.SubscribersPipeConnections()
-#         topic = MotionVectorTopic(subs_pipe_conns)
-#
-#         process = mp.Process(target=subscribing, args=(subs_pipe_conns,))
-#         process.start()
-#         time.sleep(2)
-#         assert topic.publish(MotionVectorMessage()) is True
-#         time.sleep(2)
-#         process.terminate()
-
-
 def test_subscribe():
     subs_pipe_conns = SubscribersPipeConnections()
     topic = MotionVectorTopic(True, subs_pipe_conns)
