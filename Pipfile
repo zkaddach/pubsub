@@ -12,6 +12,7 @@ pytest = "*"
 mypy = "*"
 numpy = "*"
 "backports.weakref" = "*"
+flake8 = "*"
 
 [dev-packages]
 
