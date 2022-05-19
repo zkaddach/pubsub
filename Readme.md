@@ -67,4 +67,4 @@ You must have the following software installed on your development machine:
 
 Enjoy ! 
 
-Check [Usage](https://github.com/zkaddach/pubsub/blob/master/Docs/Usage.md) for more details on how to use this project as a developper.
+Check [Architecture](https://github.com/zkaddach/pubsub/blob/master/Docs/Architecture.md) for more details.
