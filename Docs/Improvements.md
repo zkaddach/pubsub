@@ -1,8 +1,10 @@
 # Improvements 
 
-Generate documentation using tools like Sphinx.
-Error management 
-Adding queues when either subscription or publication is not done
-Handling topic doesn't exist yet error
-Using Pool  for processes ? 
-Issue with class attributes !!! Shared objects by all subclasses ?
+Here are some possible improvements for the project:
+- Generate documentation using tools like Sphinx.
+- Make it more resilient : 
+    - Cache actions when either topics, publishers or subscribers are down
+    - Class attributes are shared by child objects, we should check that it is okay
+    - Manage better errors such as topics that doesn't exist yet
+- Add tests in respect of the FIRST method
+  
